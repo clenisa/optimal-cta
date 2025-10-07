@@ -42,13 +42,24 @@ export default function Section({ id, title, subtitle, content, isActive, showBu
           transition={{ duration: 0.5, delay: 0.4 }}
           className="mt-8"
         >
-          <Button
-            variant="outline"
-            size="lg"
-            className="text-[#FF4D00] bg-transparent border-[#FF4D00] hover:bg-[#FF4D00] hover:text-black transition-colors"
-          >
-            {buttonText}
-          </Button>
+          {id === 'hero' ? (
+            <Button
+              variant="outline"
+              size="lg"
+              className="text-[#FF4D00] bg-transparent border-[#FF4D00] hover:bg-[#FF4D00] hover:text-black transition-colors"
+              asChild
+            >
+              <a href="https://www.carloslenis.com/">{buttonText}</a>
+            </Button>
+          ) : (
+            <Button
+              variant="outline"
+              size="lg"
+              className="text-[#FF4D00] bg-transparent border-[#FF4D00] hover:bg-[#FF4D00] hover:text-black transition-colors"
+            >
+              {buttonText}
+            </Button>
+          )}
         </motion.div>
       )}
     </section>
