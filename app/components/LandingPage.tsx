@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import { motion, useScroll, useSpring } from 'framer-motion'
 import Section from './Section'
 import Layout from './Layout'
+import Navigation from './Navigation'
 import { sections } from './constants/sections'
 
 export default function LandingPage() {
@@ -45,24 +46,33 @@ export default function LandingPage() {
 
   return (
     <Layout>
+      {/* Top Navigation Bar */}
+      <Navigation onNavClick={handleNavClick} />
+      
+      {/* Side Navigation Dots */}
       <nav className="fixed top-0 right-0 h-screen flex flex-col justify-center z-30 p-4">
         {sections.map((section, index) => (
           <button
             key={section.id}
             className={`w-3 h-3 rounded-full my-2 transition-all ${
-              index === activeSection ? 'bg-white scale-150' : 'bg-gray-600'
+              index === activeSection ? 'bg-[#FF4D00] scale-150' : 'bg-gray-600 hover:bg-gray-500'
             }`}
             onClick={() => handleNavClick(index)}
+            aria-label={`Go to ${section.title}`}
           />
         ))}
       </nav>
+      
+      {/* Progress Bar */}
       <motion.div
-        className="fixed top-0 left-0 right-0 h-0.5 bg-white origin-left z-30"
+        className="fixed top-[73px] left-0 right-0 h-0.5 bg-[#FF4D00] origin-left z-30"
         style={{ scaleX }}
       />
+      
+      {/* Main Content */}
       <div 
         ref={containerRef} 
-        className="h-full overflow-y-auto snap-y snap-mandatory"
+        className="h-full overflow-y-auto snap-y snap-mandatory pt-[73px]"
       >
         {sections.map((section, index) => (
           <Section
