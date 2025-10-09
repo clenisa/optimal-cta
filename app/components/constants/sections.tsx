@@ -3,31 +3,31 @@ import { Badge } from "../ui/badge"
 export const sections = [
   { 
     id: 'hero', 
-    subtitle: <Badge variant="outline" className="text-white border-white">S1: Feb 15</Badge>,
-    title: "It's time to build.",
+    subtitle: <Badge variant="outline" className="text-white border-white">Now live</Badge>,
+    title: "We're finally ready for you!",
     showButton: true,
-    buttonText: 'apply to s5'
+    buttonText: 'Sign in'
   },
   { 
     id: 'about', 
-    title: 'Why Us?', 
-    content: 'We provide resources, mentorship, and a supportive network to help you grow your projects.' 
+    title: 'Your financial command center', 
+    content: 'Optimal Dashboard V2 brings a desktop-style experience to the web so you can analyze, manage, and understand your finances in one place—fast, focused, and built for real work.' 
   },
   { 
     id: 'features', 
-    title: 'What We Offer', 
-    content: 'Access to expert advice, networking opportunities, and cutting-edge tools to accelerate your growth.' 
+    title: 'Powerful tools, seamlessly integrated', 
+    content: 'Transaction Manager, Category Trends, Account Balances, Mortgage Calculator, AI Chat, CSV tools, and real-time charts—all working together to turn raw data into clear decisions.' 
   },
   { 
     id: 'testimonials', 
-    title: 'Success Stories', 
-    content: 'Hear from solo builders who have transformed their side projects into thriving businesses.' 
+    title: 'Built on trusted technology', 
+    content: 'Next.js 14, TypeScript, Tailwind, Supabase, Stripe, Chart.js, and multi-provider AI (OpenAI + Ollama) deliver speed, security, and reliability you can count on.' 
   },
   { 
     id: 'join', 
-    title: 'Get Started', 
-    content: 'Ready to take your side project to the next level? Join our community today and start building your future.',
+    title: 'Make better money moves', 
+    content: 'Import, validate, visualize, and act. Connect accounts, process CSVs, chat with AI for insights, and manage payments—all inside a focused, windowed workspace.',
     showButton: true,
-    buttonText: 'Join Now'
+    buttonText: 'Get started'
   },
 ]
