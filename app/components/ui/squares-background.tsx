@@ -6,6 +6,7 @@ interface SquaresProps {
   borderColor?: string
   squareSize?: number
   hoverFillColor?: string
+  backgroundColor?: string
   className?: string
 }
 
@@ -15,6 +16,7 @@ export function Squares({
   borderColor = "#333",
   squareSize = 40,
   hoverFillColor = "#222",
+  backgroundColor = "#060606",
   className,
 }: SquaresProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -35,7 +37,7 @@ export function Squares({
     if (!ctx) return
 
     // Set canvas background
-    canvas.style.background = "#060606"
+    canvas.style.background = backgroundColor
 
     const resizeCanvas = () => {
       const rect = canvas.getBoundingClientRect()
@@ -83,8 +85,16 @@ export function Squares({
         canvas.height / 2,
         Math.sqrt(Math.pow(canvas.width, 2) + Math.pow(canvas.height, 2)) / 2,
       )
-      gradient.addColorStop(0, "rgba(6, 6, 6, 0)")
-      gradient.addColorStop(1, "#060606")
+      
+      // We want the gradient to fade from transparent to the background color
+      // Since we can't easily derive the transparent version of backgroundColor hex string without parsing,
+      // we'll use a simple heuristic or just use transparent black/white if possible.
+      // Ideally we parse the hex. For now, let's just assume we can use a fixed transparent color 
+      // or rely on the user passing a color that looks good fading from transparent.
+      // But standard transparent is rgba(0,0,0,0).
+      
+      gradient.addColorStop(0, "rgba(0, 0, 0, 0)") 
+      gradient.addColorStop(1, backgroundColor)
 
       ctx.fillStyle = gradient
       ctx.fillRect(0, 0, canvas.width, canvas.height)
@@ -162,7 +172,7 @@ export function Squares({
         cancelAnimationFrame(requestRef.current)
       }
     }
-  }, [direction, speed, borderColor, hoverFillColor, hoveredSquare, squareSize])
+  }, [direction, speed, borderColor, hoverFillColor, hoveredSquare, squareSize, backgroundColor])
 
   return (
     <canvas

@@ -42,8 +42,8 @@ export default function Section({
           {(features as string[]).map((feature, index) => {
             const Icon = iconMap[feature] || CheckCircle2
             return (
-              <div key={index} className="flex items-center space-x-3 text-white/80">
-                <Icon className="w-5 h-5 text-[#FF4D00] flex-shrink-0" />
+              <div key={index} className="flex items-center space-x-3 text-muted-foreground">
+                <Icon className="w-5 h-5 text-primary flex-shrink-0" />
                 <span className="text-sm md:text-base">{feature}</span>
               </div>
             )
@@ -61,9 +61,9 @@ export default function Section({
         transition={{ duration: 0.5, delay: 0.3 }}
       >
         {(features as any[]).map((feature, index) => (
-          <div key={index} className="border border-white/10 rounded-lg p-6 bg-white/5 backdrop-blur-sm">
-            <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-            <p className="text-white/60 text-sm">{feature.description}</p>
+          <div key={index} className="border border-border rounded-lg p-6 bg-card/50 backdrop-blur-sm">
+            <h3 className="text-xl font-semibold text-foreground mb-2">{feature.title}</h3>
+            <p className="text-muted-foreground text-sm">{feature.description}</p>
           </div>
         ))}
       </motion.div>
@@ -82,8 +82,8 @@ export default function Section({
       >
         {stats.map((stat, index) => (
           <div key={index} className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-[#FF4D00] mb-2">{stat.value}</div>
-            <div className="text-sm text-white/60 uppercase tracking-wider">{stat.label}</div>
+            <div className="text-3xl md:text-4xl font-bold text-primary mb-2">{stat.value}</div>
+            <div className="text-sm text-muted-foreground uppercase tracking-wider">{stat.label}</div>
           </div>
         ))}
       </motion.div>
@@ -101,11 +101,11 @@ export default function Section({
         transition={{ duration: 0.5, delay: 0.3 }}
       >
         {testimonials.map((testimonial, index) => (
-          <div key={index} className="border border-white/10 rounded-lg p-6 bg-white/5 backdrop-blur-sm">
-            <p className="text-white/80 italic mb-4">"{testimonial.quote}"</p>
+          <div key={index} className="border border-border rounded-lg p-6 bg-card/50 backdrop-blur-sm">
+            <p className="text-muted-foreground italic mb-4">"{testimonial.quote}"</p>
             <div>
-              <div className="text-white font-semibold">{testimonial.author}</div>
-              <div className="text-white/60 text-sm">{testimonial.role}</div>
+              <div className="text-foreground font-semibold">{testimonial.author}</div>
+              <div className="text-muted-foreground text-sm">{testimonial.role}</div>
             </div>
           </div>
         ))}
@@ -128,24 +128,24 @@ export default function Section({
             key={index} 
             className={`border rounded-lg p-8 ${
               plan.popular 
-                ? 'border-[#FF4D00] bg-[#FF4D00]/10' 
-                : 'border-white/20 bg-white/5'
+                ? 'border-primary bg-primary/10' 
+                : 'border-border bg-card/50'
             } backdrop-blur-sm relative`}
           >
             {plan.popular && (
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#FF4D00] text-black px-3 py-1 rounded-full text-xs font-semibold">
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-semibold">
                 MOST POPULAR
               </div>
             )}
-            <div className="text-2xl font-bold text-white mb-2">{plan.name}</div>
+            <div className="text-2xl font-bold text-foreground mb-2">{plan.name}</div>
             <div className="flex items-baseline mb-6">
-              <span className="text-4xl font-bold text-white">{plan.price}</span>
-              <span className="text-white/60 ml-2">{plan.period}</span>
+              <span className="text-4xl font-bold text-foreground">{plan.price}</span>
+              <span className="text-muted-foreground ml-2">{plan.period}</span>
             </div>
             <ul className="space-y-3">
               {plan.features.map((feature, i) => (
-                <li key={i} className="flex items-start text-white/80">
-                  <CheckCircle2 className="w-5 h-5 text-[#FF4D00] mr-2 flex-shrink-0 mt-0.5" />
+                <li key={i} className="flex items-start text-muted-foreground">
+                  <CheckCircle2 className="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" />
                   <span className="text-sm">{feature}</span>
                 </li>
               ))}
@@ -153,8 +153,8 @@ export default function Section({
             <Button
               className={`w-full mt-6 ${
                 plan.popular
-                  ? 'bg-[#FF4D00] text-black hover:bg-[#FF4D00]/90'
-                  : 'bg-white/10 text-white hover:bg-white/20'
+                  ? 'bg-primary text-primary-foreground hover:bg-primary/90'
+                  : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
               }`}
             >
               {plan.price === "Custom" ? "Contact Sales" : "Choose Plan"}
@@ -188,7 +188,7 @@ export default function Section({
         </motion.h2>
         {content && (
           <motion.p
-            className="text-lg md:text-xl lg:text-2xl max-w-3xl mt-6 text-neutral-400"
+            className="text-lg md:text-xl lg:text-2xl max-w-3xl mt-6 text-muted-foreground"
             initial={{ opacity: 0, y: 50 }}
             animate={isActive ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -212,7 +212,7 @@ export default function Section({
             <Button
               variant="outline"
               size="lg"
-              className="text-[#FF4D00] bg-transparent border-[#FF4D00] hover:bg-[#FF4D00] hover:text-black transition-colors font-semibold px-8"
+              className="text-primary bg-transparent border-primary hover:bg-primary hover:text-primary-foreground transition-colors font-semibold px-8"
               asChild
             >
               <a href="https://www.carloslenis.com/">{buttonText}</a>

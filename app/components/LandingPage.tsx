@@ -55,7 +55,7 @@ export default function LandingPage() {
           <button
             key={section.id}
             className={`w-3 h-3 rounded-full my-2 transition-all ${
-              index === activeSection ? 'bg-[#FF4D00] scale-150' : 'bg-gray-600 hover:bg-gray-500'
+              index === activeSection ? 'bg-primary scale-150' : 'bg-muted-foreground/40 hover:bg-muted-foreground'
             }`}
             onClick={() => handleNavClick(index)}
             aria-label={`Go to ${section.title}`}
@@ -65,7 +65,7 @@ export default function LandingPage() {
       
       {/* Progress Bar */}
       <motion.div
-        className="fixed top-[73px] left-0 right-0 h-0.5 bg-[#FF4D00] origin-left z-30"
+        className="fixed top-[73px] left-0 right-0 h-0.5 bg-primary origin-left z-30"
         style={{ scaleX }}
       />
       
