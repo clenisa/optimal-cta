@@ -5,9 +5,9 @@ import { ThemeProvider } from '@/components/theme-provider'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Solo Builders Community',
-  description: 'Accelerator platform for solo builders working on side projects',
-    generator: 'v0.app'
+  title: 'Optimal — The OS for AI-enabled teams',
+  description: 'One platform. Many expert tools. Faster deals. Smarter operations. Optimal bundles specialist apps and AI into a single, secure web OS. Features include tool aggregate (Optimal OS), Dendetective property deal engine, OpenBanking budgeting, Experian integration, e-commerce price analytics, and Optimal AI with frontier LLMs.',
+  generator: 'v0.app'
 }
 
 export default function RootLayout({

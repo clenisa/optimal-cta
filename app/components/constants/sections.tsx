@@ -3,116 +3,80 @@ import { Badge } from "../ui/badge"
 export const sections = [
   { 
     id: 'hero', 
-    subtitle: <Badge variant="outline" className="text-white border-white">Now live</Badge>,
-    title: "We're finally ready for you!",
-    content: "Transform your financial data into actionable insights with our revolutionary dashboard that puts you in complete control.",
+    subtitle: <Badge variant="outline" className="border-primary">B2B Platform</Badge>,
+    title: "Optimal — The OS for AI-enabled teams",
+    content: "One platform. Many expert tools. Faster deals. Smarter operations. Optimal bundles specialist apps and AI into a single, secure web OS so your team can automate workflows, analyze deals, and move from data to decisions — faster.",
     features: [
-      "Real-time account synchronization",
-      "AI-powered financial insights",
-      "Bank-level security"
+      "Enterprise-grade security & authentication",
+      "Production-ready architecture",
+      "Real-time state & workflow automation"
     ],
     showButton: true,
-    buttonText: 'Start Free Trial'
-  },
-  { 
-    id: 'about', 
-    title: 'Your financial command center', 
-    content: 'Optimal Dashboard V2 brings a desktop-style experience to the web so you can analyze, manage, and understand your finances in one place—fast, focused, and built for real work.',
-    features: [
-      "Multi-window workspace for parallel analysis",
-      "Instant CSV import and validation",
-      "Real-time transaction categorization",
-      "Advanced filtering and search capabilities"
-    ],
-    stats: [
-      { value: "99.9%", label: "Uptime" },
-      { value: "256-bit", label: "Encryption" },
-      { value: "<100ms", label: "Response Time" },
-      { value: "24/7", label: "Support" }
-    ]
+    buttonText: 'Request a demo'
   },
   { 
     id: 'features', 
-    title: 'Powerful tools, seamlessly integrated', 
-    content: 'Transaction Manager, Category Trends, Account Balances, Mortgage Calculator, AI Chat, CSV tools, and real-time charts—all working together to turn raw data into clear decisions.',
+    title: 'Key features', 
+    content: 'Specialist tools and AI orchestration in a single, secure web OS for teams.',
     features: [
       { 
-        title: "Smart Transaction Manager",
-        description: "Automatically categorize, tag, and analyze every transaction across all your accounts"
+        title: "Tool Aggregate (Optimal OS)",
+        description: "A web-native 'desktop' for teams: composable apps, enterprise auth (Supabase), real-time state, and a plugin model so your teams can run multiple workflows inside a single secure interface. (Built with Next.js, Zustand, Tailwind; production-grade architecture and debugging tools.)"
       },
       { 
-        title: "AI Financial Assistant", 
-        description: "Get instant answers about your spending, savings, and financial patterns"
+        title: "Dendetective — Property Deal Engine", 
+        description: "Streamlined investment-property analysis and automated deal creation with partner brokers. Run underwriting, compute adjusted ROI/cashflow scenarios, normalize listing feeds, and generate broker-ready offers and summaries."
       },
       { 
-        title: "Advanced Analytics", 
-        description: "Visualize trends, detect anomalies, and forecast future cash flow"
+        title: "Open Banking + Budgeting", 
+        description: "Bank connectivity for continuous budgeting, transaction categorization, automated reconciliations and exportable CSVs. Designed to reduce manual reconciliation and accelerate cashflow decisions for businesses and portfolios."
       },
       { 
-        title: "Custom Reports", 
-        description: "Generate detailed reports for taxes, budgeting, or financial planning"
+        title: "Experian Integration", 
+        description: "Plugs credit and bureau data into the budgeting and underwriting flows for richer risk and affordability signals (via the same open banking auth flow)."
+      },
+      { 
+        title: "E-commerce Price Analysis (Coming Soon)", 
+        description: "Retail & e-commerce price benchmarking and margin analytics that highlight opportunities, competitive pricing, and automated repricing signals for sellers and resellers."
+      },
+      { 
+        title: "Optimal AI — Frontier LLMs + Orchestration", 
+        description: "We run an ensemble of frontier language models and task-specific microservices to power chat assistants, summarization, and decision automation. Built for enterprise data privacy and fine-tuning into your workflows."
+      },
+      { 
+        title: "Chat & Agent Platform (Dendiver / Dendetective)", 
+        description: "Production chatbots and agent flows integrated with n8n and backend services for workflow automation, partner coordination, and report generation. (Chat service template built on Next.js / Supabase; streaming responses via n8n.)"
+      },
+      { 
+        title: "CLI Agent Service & Developer Tools", 
+        description: "Terminal/CLI tools for power users to run OS services, call finance APIs, and operate agent workflows programmatically. Great for automation and SRE workflows."
+      },
+      { 
+        title: "White-label & Consulting", 
+        description: "We're a boutique AI/tech consultancy that ships production integrations: from open banking and Experian to real estate and ecommerce analytics. We build, integrate, and operate the tooling as an extension of your team."
       }
     ]
   },
   { 
-    id: 'testimonials', 
-    title: 'Built on trusted technology', 
-    content: 'Next.js 14, TypeScript, Tailwind, Supabase, Stripe, Chart.js, and multi-provider AI (OpenAI + Ollama) deliver speed, security, and reliability you can count on.',
-    testimonials: [
-      {
-        quote: "This dashboard completely changed how I manage my finances. The AI insights alone saved me thousands.",
-        author: "Sarah Chen",
-        role: "Small Business Owner"
-      },
-      {
-        quote: "Finally, a financial tool that actually understands what I need. The CSV import feature is a game-changer.",
-        author: "Marcus Rodriguez",
-        role: "Freelance Consultant"
-      },
-      {
-        quote: "The real-time sync and multi-window interface make this feel like a professional trading platform.",
-        author: "Emily Watson",
-        role: "Investment Analyst"
-      }
-    ]
-  },
-  { 
-    id: 'pricing',
-    title: 'Simple, transparent pricing',
-    content: 'Choose the plan that fits your needs. All plans include core features with no hidden fees.',
-    pricing: [
-      {
-        name: "Starter",
-        price: "$9",
-        period: "per month",
-        features: ["3 connected accounts", "Basic analytics", "CSV import/export", "Email support"]
-      },
-      {
-        name: "Professional",
-        price: "$29",
-        period: "per month",
-        popular: true,
-        features: ["Unlimited accounts", "Advanced AI insights", "Custom categories", "Priority support", "API access"]
-      },
-      {
-        name: "Enterprise",
-        price: "Custom",
-        period: "contact us",
-        features: ["White-label options", "Dedicated support", "Custom integrations", "SLA guarantee", "Training included"]
-      }
-    ]
-  },
-  { 
-    id: 'join', 
-    title: 'Make better money moves', 
-    content: 'Import, validate, visualize, and act. Connect accounts, process CSVs, chat with AI for insights, and manage payments—all inside a focused, windowed workspace.',
+    id: 'benefits', 
+    title: 'Why enterprises choose Optimal', 
+    content: 'Fast path from proof-of-concept to production with secure authentication, observability, and modular architecture.',
     features: [
-      "30-day free trial",
-      "No credit card required",
-      "Cancel anytime",
-      "Free data migration"
+      "Fast path from proof-of-concept to production with secure authentication, observability, and modular architecture",
+      "Built for regulated data: careful auth, auditing, and enterprise debugging",
+      "Deep domain tooling (property underwriting, budgeting, e-commerce pricing), plus custom consulting to tailor workflows"
+    ]
+  },
+  { 
+    id: 'cta', 
+    title: 'Ready to transform your workflows?', 
+    content: 'Request a demo to see how Optimal can accelerate your team\'s operations, or talk to our sales team about enterprise integrations and white-label solutions.',
+    features: [
+      "Enterprise integrations & white-label options",
+      "Custom consulting & workflow automation",
+      "Production-ready architecture & support"
     ],
     showButton: true,
-    buttonText: 'Get Started Now'
+    buttonText: 'Request a demo'
   },
 ]
