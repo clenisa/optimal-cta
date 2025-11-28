@@ -55,15 +55,15 @@ export default function Section({
     // Render detailed features
     return (
       <motion.div
-        className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12"
         initial={{ opacity: 0, y: 20 }}
         animate={isActive ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.5, delay: 0.3 }}
       >
         {(features as any[]).map((feature, index) => (
-          <div key={index} className="border border-border rounded-lg p-6 bg-card/50 backdrop-blur-sm">
+          <div key={index} className="border border-border rounded-lg p-6 bg-card/50 dark:bg-card/30 backdrop-blur-sm hover:bg-card/70 dark:hover:bg-card/50 transition-colors">
             <h3 className="text-xl font-semibold text-foreground mb-2">{feature.title}</h3>
-            <p className="text-muted-foreground text-sm">{feature.description}</p>
+            <p className="text-muted-foreground text-sm leading-relaxed">{feature.description}</p>
           </div>
         ))}
       </motion.div>
@@ -101,7 +101,7 @@ export default function Section({
         transition={{ duration: 0.5, delay: 0.3 }}
       >
         {testimonials.map((testimonial, index) => (
-          <div key={index} className="border border-border rounded-lg p-6 bg-card/50 backdrop-blur-sm">
+          <div key={index} className="border border-border rounded-lg p-6 bg-card/50 dark:bg-card/30 backdrop-blur-sm hover:bg-card/70 dark:hover:bg-card/50 transition-colors">
             <p className="text-muted-foreground italic mb-4">"{testimonial.quote}"</p>
             <div>
               <div className="text-foreground font-semibold">{testimonial.author}</div>
@@ -128,9 +128,9 @@ export default function Section({
             key={index} 
             className={`border rounded-lg p-8 ${
               plan.popular 
-                ? 'border-primary bg-primary/10' 
-                : 'border-border bg-card/50'
-            } backdrop-blur-sm relative`}
+                ? 'border-primary bg-primary/10 dark:bg-primary/20' 
+                : 'border-border bg-card/50 dark:bg-card/30'
+            } backdrop-blur-sm hover:bg-card/70 dark:hover:bg-card/50 transition-colors relative`}
           >
             {plan.popular && (
               <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-semibold">

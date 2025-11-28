@@ -28,16 +28,10 @@ export default function Navigation({ onNavClick }: NavigationProps) {
         {/* Navigation Links */}
         <div className="hidden md:flex items-center space-x-8">
           <button 
-            onClick={() => onNavClick(1)}
-            className="text-muted-foreground hover:text-foreground transition-colors font-medium"
-          >
-            Features
-          </button>
-          <button 
             onClick={() => onNavClick(2)}
             className="text-muted-foreground hover:text-foreground transition-colors font-medium"
           >
-            Technology
+            Features
           </button>
           <button 
             onClick={() => onNavClick(3)}
@@ -61,12 +55,12 @@ export default function Navigation({ onNavClick }: NavigationProps) {
             className="hidden sm:inline-flex"
             asChild
           >
-            <a href="https://www.carloslenis.com/">Sign In</a>
+            <a href="https://www.carloslenis.com/">Talk to sales</a>
           </Button>
           <Button
             asChild
           >
-            <a href="https://www.carloslenis.com/">Get Started</a>
+            <a href="https://www.carloslenis.com/">Request a demo</a>
           </Button>
         </div>
       </div>
