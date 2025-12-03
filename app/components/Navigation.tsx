@@ -55,12 +55,12 @@ export default function Navigation({ onNavClick }: NavigationProps) {
             className="hidden sm:inline-flex"
             asChild
           >
-            <a href="https://www.carloslenis.com/">Talk to sales</a>
+            <a href="https://app.optimal.miami/">Talk to sales</a>
           </Button>
           <Button
             asChild
           >
-            <a href="https://www.carloslenis.com/">Request a demo</a>
+            <a href="https://app.optimal.miami/">Request a demo</a>
           </Button>
         </div>
       </div>
