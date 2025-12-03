@@ -215,7 +215,7 @@ export default function Section({
               className="text-primary bg-transparent border-primary hover:bg-primary hover:text-primary-foreground transition-colors font-semibold px-8"
               asChild
             >
-              <a href="https://www.carloslenis.com/">{buttonText}</a>
+              <a href="https://app.optimal.miami/">{buttonText}</a>
             </Button>
           </motion.div>
         )}
